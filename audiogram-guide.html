@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بوصلة السمع | نساعدك تجد السماعة الطبية الأنسب لسمعك</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f8f9;--card:#fff;--ink:#14232b;--mut:#5b6b73;--line:#d9e3e7;--pri:#0b6e7f;--pri2:#e2f2f4;--R:#c8352e;--L:#1f5fbf;--warn:#fff4dc;--warnb:#d99a1e;--bana:rgba(11,110,127,.10)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a1f;--card:#16252c;--ink:#e8f0f3;--mut:#9fb2ba;--line:#2a3d46;--pri:#4cc0d2;--pri2:#173943;--R:#ff6b61;--L:#6fa2ff;--warn:#3a2f14;--warnb:#d99a1e;--bana:rgba(76,192,210,.12)}}
+:root[data-theme="dark"]{--bg:#0f1a1f;--card:#16252c;--ink:#e8f0f3;--mut:#9fb2ba;--line:#2a3d46;--pri:#4cc0d2;--pri2:#173943;--R:#ff6b61;--L:#6fa2ff;--warn:#3a2f14;--warnb:#d99a1e;--bana:rgba(76,192,210,.12)}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,"Segoe UI",Tahoma,sans-serif;line-height:1.8;font-size:16px}
+main{max-width:980px;margin:0 auto;padding:0 16px 60px}
+header.hero{padding:44px 0 28px}
+h1{font-size:clamp(30px,6vw,52px);font-weight:800;margin:0 0 12px;line-height:1.25}
+.lead{color:var(--mut);font-size:18px;max-width:640px;margin:0 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+button,.btn{font:inherit;cursor:pointer;border-radius:12px;border:1.5px solid var(--pri);background:var(--pri);color:#fff;padding:14px 22px;font-weight:700;font-size:17px}
+button.sec{background:transparent;color:var(--pri)}
+button.sm{padding:6px 12px;font-size:14px;border-radius:8px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--warnb);outline-offset:2px}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:20px 0}
+h2{margin:0 0 14px;font-size:24px}
+h3{margin:0 0 6px;font-size:18px}
+.grid8{display:grid;grid-template-columns:70px repeat(8,1fr);gap:6px;align-items:center;direction:ltr;font-size:14px}
+.grid8 input,input.t,select,textarea{font-size:16px}
+.grid8 input{width:100%;min-width:0;padding:8px 2px;text-align:center;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.grid8 .rl{direction:rtl;font-weight:700;font-size:13px}
+.grid8 .h{text-align:center;color:var(--mut)}
+.scroll{overflow-x:auto}
+.scroll>.grid8{min-width:560px}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--mut);flex:1 1 150px}
+select,input.t{font:inherit;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.ear{border:1px solid var(--line);border-radius:12px;padding:14px}
+.ear.r{border-top:5px solid var(--R)}.ear.l{border-top:5px solid var(--L)}
+.tag{display:inline-block;background:var(--pri2);color:var(--pri);border-radius:20px;padding:2px 12px;font-size:14px;font-weight:700;margin:2px 0 2px 6px}
+.warn{background:var(--warn);border:1.5px solid var(--warnb);border-radius:12px;padding:12px 16px;margin:12px 0}
+.note{color:var(--mut);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.hc{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.hc .brand{font-weight:800;font-size:20px}
+.hc ul{margin:0;padding-inline-start:18px;font-size:14px}
+.agent{background:var(--pri2);border-radius:10px;padding:10px;font-size:14px;display:none}
+table{border-collapse:collapse;min-width:640px;width:100%;font-size:14px}
+th,td{border:1px solid var(--line);padding:8px;text-align:right;vertical-align:top}
+th{background:var(--pri2)}
+.upl{border:2px dashed var(--line);border-radius:12px;padding:16px;text-align:center}
+.upl img{max-width:100%;max-height:300px;border-radius:8px;margin-top:10px}
+.hidden{display:none}
+.modes{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.mode{border:1.5px solid var(--line);border-radius:10px;padding:6px 12px;cursor:pointer;font-weight:700;font-size:15px;position:relative}
+.mode:has(input:checked){border-color:var(--pri);background:var(--pri2)}
+.mode input{position:absolute;opacity:0;pointer-events:none}
+.mode:has(input:focus-visible){outline:3px solid var(--warnb)}
+.draw svg{cursor:crosshair;border:1px solid var(--line);border-radius:12px;display:block}
+svg text{font-family:Tajawal,sans-serif}
+.small-sticky{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:6px 0;z-index:5;text-align:left}
+@media (prefers-reduced-motion:no-preference){.fade{animation:f .5s ease}@keyframes f{from{opacity:0}to{opacity:1}}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+<div style="font-weight:800;font-size:22px;color:var(--pri);margin-bottom:6px">🧭 بوصلة السمع</div>
+<div class="note" style="margin-bottom:18px">نساعدك تجد السماعة الطبية الأنسب لسمعك</div>
+<p class="lead">أدخل نتيجة فحص السمع على الرسم، وسنساعدك على فهمها واستكشاف السماعات الطبية التي قد تناسب احتياجاتك.</p>
+<div class="cta">
+<button id="bMan">🎧 أدخل التخطيط يدوياً</button>
+</div>
+</header>
+
+<section id="entry">
+<h2>تخطيط السمع <span class="tag">مطلوب</span></h2>
+<p class="note">اختر الأذن ثم اضغط على الرسم عند التردد والشدة المطابقين لتخطيطك. المطلوب 3 نقاط على الأقل من 500 و1000 و2000 و4000 Hz لأذن واحدة. اضغط على نقطة موجودة لحذفها.</p>
+<div class="modes" role="radiogroup" aria-label="اختيار الأذن">
+<label class="mode"><input type="radio" name="mode" value="R" checked><span style="color:var(--R)">⭘ الأذن اليمنى</span></label>
+<label class="mode"><input type="radio" name="mode" value="L"><span style="color:var(--L)">✕ الأذن اليسرى</span></label>
+</div>
+<div id="liveChart" class="draw"></div>
+<div class="row" style="align-items:center"><span id="hint" class="note">اضغط على الرسم لوضع نقطة.</span><button class="sm sec" id="clr" type="button">مسح الكل</button></div>
+<details><summary><b>إدخال بالأرقام (اختياري)</b></summary><div class="scroll"><div class="grid8" id="g"></div></div></details>
+<h3 style="margin-top:18px">معلومات إضافية <span class="note">(اختيارية)</span></h3>
+<div class="row">
+<label class="f">SRT اليمنى (dB)<input class="t" id="srtR" type="number"></label>
+<label class="f">SRT اليسرى (dB)<input class="t" id="srtL" type="number"></label>
+<label class="f">WRS اليمنى (%)<input class="t" id="wrsR" type="number" min="0" max="100"></label>
+<label class="f">WRS اليسرى (%)<input class="t" id="wrsL" type="number" min="0" max="100"></label>
+<label class="f">Tympanometry اليمنى<select id="tympR"><option value="">غير متوفر</option><option>A</option><option>As</option><option>Ad</option><option>B</option><option>C</option></select></label>
+<label class="f">Tympanometry اليسرى<select id="tympL"><option value="">غير متوفر</option><option>A</option><option>As</option><option>Ad</option><option>B</option><option>C</option></select></label>
+</div>
+<button id="bAn">حلّل التخطيط</button>
+</section>
+
+<div id="result" class="hidden fade"></div>
+
+<section id="curSec" class="hidden">
+<h2>لديك سماعة حالياً؟ <span class="tag">اختياري</span></h2>
+<p class="note">اكتب اسم سماعتك، وسنقارن قوتها بتخطيط سمعك لنقدّر إن كانت مناسبة أم لا.</p>
+<div class="row">
+<label class="f">اسم السماعة / الموديل<input class="t" id="curName" autocomplete="off" placeholder="مثال: Phonak Audéo"></label>
+<datalist id="mdl"></datalist>
+<label class="f">قوة السماعة (Receiver)<select id="curPw"><option value="">لا أعرف</option><option value="S">S (خفيفة)</option><option value="M">M (متوسطة)</option><option value="P">P (قوية)</option><option value="UP">UP (قوية جداً)</option></select></label>
+</div>
+<button id="bCur" type="button">قيّم سماعتي</button>
+<div id="curOut" style="margin-top:12px"></div>
+</section>
+
+<section id="prefs" class="hidden">
+<h2>السماعات التي قد تناسب نتيجة سمعك</h2>
+<div class="warn">بناءً على المعلومات المدخلة، هذه بعض خيارات السماعات التي قد تكون مناسبة لدرجة وشكل ضعف السمع لديك. الاختيار النهائي، قوة الـ Receiver، الـ Coupling والبرمجة يجب أن تتم بواسطة أخصائي سمعيات بعد التقييم السريري.</div>
+<p class="note">كل الأسئلة التالية اختيارية. يمكنك الضغط على "اعرض الخيارات" مباشرة، أو الإجابة لتحسين الترشيح.</p>
+<div class="row">
+<label class="f">العمر<select id="age"><option value="">لا يهم / أفضّل عدم التحديد</option><option value="y">أقل من 18</option><option value="a">18–59</option><option value="s">60 فأكثر</option></select></label>
+<label class="f">نمط الحياة<select id="life"><option value="">لا يهم / أفضّل عدم التحديد</option><option value="q">هادئ / منزلي</option><option value="m">متوسط</option><option value="n">نشط واجتماعات وضوضاء</option></select></label>
+<label class="f">الجوال<select id="phone"><option value="">لا يهم / أفضّل عدم التحديد</option><option value="i">iPhone</option><option value="a">Android</option></select></label>
+<label class="f">الشكل المفضل<select id="style"><option value="">لا يهم</option><option>RIC</option><option>BTE</option><option>ITE</option><option>CIC/IIC</option></select></label>
+<label class="f">الميزانية (تقريبية حسب فئة السماعة)<select id="bud"><option value="">لا يهم</option><option value="1">اقتصادية</option><option value="2">متوسطة</option><option value="3">عالية</option></select></label>
+</div>
+<div class="row">
+<label><input type="checkbox" id="bt"> أحتاج Bluetooth</label>
+<label><input type="checkbox" id="rc"> أفضّل Rechargeable</label>
+<label><input type="checkbox" id="nz"> السماع في الضوضاء مهم لي</label>
+<label><input type="checkbox" id="tn"> لدي طنين وأريد ميزات له</label>
+</div>
+<button id="bRec">اعرض الخيارات</button>
+<div id="recs" class="cards" style="margin-top:16px"></div>
+<div style="margin-top:14px"><button id="bCmp" class="sec hidden">قارن السماعات المناسبة لي</button></div>
+<div id="cmp" class="scroll" style="margin-top:14px"></div>
+</section>
+
+<section>
+<h2>🏠 زيارة منزلية لتركيب السماعة</h2>
+<p>تتوفر خدمة زيارة منزلية لتركيب السماعة من خلال تطبيق <b>سماعتي</b>.</p>
+<p><a class="btn" href="tel:0552007272" style="text-decoration:none;display:inline-block">اتصل بسماعتي: <span dir="ltr">0552007272</span></a></p>
+</section>
+
+<section id="agentsSec" class="hidden">
+<details><summary><b>لوحة التحكم (تحديث الوكلاء والموديلات)</b></summary>
+<p class="note">عدّل بصيغة JSON ثم احفظ. تُحفظ التعديلات في متصفحك فقط في هذه النسخة، ولربطها بقاعدة بيانات مشتركة يلزم خادم.</p>
+<label class="f">الوكلاء<textarea id="adA" rows="9" class="t" style="font-family:monospace;direction:ltr" aria-label="بيانات الوكلاء"></textarea></label>
+<label class="f">الموديلات<textarea id="adM" rows="12" class="t" style="font-family:monospace;direction:ltr" aria-label="بيانات الموديلات"></textarea></label>
+<div class="row"><button class="sm" id="adS">حفظ</button><button class="sm sec" id="adR">استعادة الافتراضي</button><span id="adMsg" class="note"></span></div>
+</details>
+</section>
+
+<section class="warn" style="background:var(--warn)">
+<b>تنبيه طبي مهم:</b> الموقع أداة تثقيفية للمساعدة في اتخاذ القرار وليس بديلاً عن تقييم أخصائي السمعيات. الاختيار النهائي، وقوة الـ Receiver، والـ Coupling، والبرمجة يجب أن تتم بواسطة أخصائي سمعيات بعد التقييم السريري.
+</section>
+</main>
+
+<script>
+const F=[250,500,1000,2000,3000,4000,6000,8000];
+const DEF_AG={
+Phonak:{name:"المدينة للسمعيات",phone:"920005422",site:"",branches:"",verified:true},
+Widex:{name:"Basha Medical Group",phone:"05041211119",site:"",branches:"",verified:true},
+Starkey:{name:"سبيل الدواء",phone:"0530002491",site:"",branches:"",verified:true},
+Signia:{name:"البركات للعناية السمعية",phone:"8001248882",site:"",branches:"",verified:true},
+Oticon:{name:"عرب تون",phone:"920001635",site:"",branches:"",verified:true},
+Hansaton:{name:"رؤية الطبية",phone:"920009365",site:"",branches:"",verified:true}};
+/* max: أقصى درجة فقدان مناسبة تقريباً 1 بسيط .. 5 شديد؛ bud 1-3 */
+const DEF_M=[
+{"b":"Phonak","m":"Audéo EON Sphere","s":"RIC","pw":"من بسيط إلى عميق حسب الـ Receiver","lo":2,"hi":5,"rc":1,"bt":1,"ph":"اتصال عالمي (Bluetooth Classic وAuracast)","nz":"Spheric Speech Clarity 3.0 بالذكاء الاصطناعي، وWindBlock 2.0 لضجيج الرياح","tn":"حسب الموديل","bud":3,"why":"الرائدة في Phonak منذ أغسطس 2026، بشريحة HYPERSONIC وتشغيل حتى 38 ساعة وبدون Telecoil"},
+{"b":"Phonak","m":"Audéo EON R","s":"RIC","pw":"من بسيط إلى عميق حسب الـ Receiver","lo":2,"hi":5,"rc":1,"bt":1,"ph":"اتصال عالمي (Bluetooth Classic وAuracast)","nz":"بدون Spheric Speech Clarity","tn":"حسب الموديل","bud":2,"why":"نفس منصة EON واتصالها بدون ميزة Spheric Speech Clarity، فهي أبسط وأكثر اقتصادية"},
+{"b":"Phonak","m":"Naída Lumity (BTE)","s":"BTE","pw":"L-PR: بسيط إلى متوسط-شديد · L-SP: بسيط إلى شديد · L-UP: شديد إلى عميق","lo":2,"hi":5,"rc":2,"bt":1,"ph":"اتصال عالمي","nz":"حسب الموديل","tn":"حسب الموديل","bud":3,"why":"سماعة خلف الأذن للفقدان الأكبر؛ L-PR قابلة للشحن، وL-SP وL-UP مع Telecoil"},
+{"b":"Phonak","m":"Virto Infinio (داخل القناة)","s":"ITE","pw":"من بسيط إلى شديد","lo":2,"hi":4,"rc":2,"bt":2,"ph":"حسب الموديل","nz":"حسب الموديل","tn":"حسب الموديل","bud":2,"why":"سماعة مخصصة داخل القناة وأقل ظهوراً، منها موديلات لاسلكية وبدون لاسلكي"},
+{"b":"Oticon","m":"Reveal","s":"RIC","pw":"miniRITE R (النطاق يحدده الأخصائي)","lo":2,"hi":4,"rc":1,"bt":1,"ph":"Bluetooth LE Audio وAuracast","nz":"ذكاء اصطناعي مزدوج: Speech AI وContext AI","tn":"حسب الموديل","bud":3,"why":"أحدث سماعات Oticon (أغسطس 2026) بشكل miniRITE R قابل للشحن"},
+{"b":"Oticon","m":"Intent","s":"RIC / BTE","pw":"miniRITE R / miniBTE R (النطاق يحدده الأخصائي)","lo":2,"hi":4,"rc":1,"bt":1,"ph":"Bluetooth LE Audio مع Google Fast Pair، وجاهزة لـ Auracast","nz":"مستشعرات 4D تتكيف مع حركتك وبيئتك","tn":"حسب الموديل","bud":2,"why":"تتكيف مع نشاط المستخدم؛ تتوفر بشكل miniRITE R وminiBTE R"},
+{"b":"Oticon","m":"Zeal","s":"ITE","pw":"للفقدان البسيط إلى المتوسط، وأحياناً إلى متوسط-شديد مع قالب مخصص","lo":2,"hi":3,"rc":1,"bt":1,"ph":"Bluetooth وبث صوتي","nz":"معالجة DNN على منصة Sirius","tn":"حسب الموديل","bud":2,"why":"داخل الأذن قابلة للشحن ببطارية مدمجة ومعالجة بمستوى RIC"},
+{"b":"Oticon","m":"Xceed (BTE قوية)","s":"BTE","pw":"للفقدان من شديد إلى عميق","lo":4,"hi":5,"rc":2,"bt":2,"ph":"حسب الموديل","nz":"للفقدان الشديد إلى العميق","tn":"حسب الموديل","bud":3,"why":"سماعة قوية خلف الأذن مصممة للفقدان الشديد والعميق"},
+{"b":"Signia","m":"Pure Charge&Go MaX","s":"RIC","pw":"حسب الموديل","lo":2,"hi":5,"rc":1,"bt":1,"ph":"حسب الموديل","nz":"أربع شبكات عصبية (DNN)","tn":"حسب الموديل","bud":3,"why":"أحدث رائدة من Signia (أغسطس 2026)، RIC قابلة للشحن"},
+{"b":"Signia","m":"Pure Charge&Go BCT IX","s":"RIC","pw":"من بسيط إلى عميق","lo":2,"hi":5,"rc":1,"bt":1,"ph":"Bluetooth Classic عالمي","nz":"RealTime Conversation Enhancement ومعالجة الصوت الذاتي OVP","tn":"متاحة عبر التطبيق","bud":2,"why":"RIC قابلة للشحن بتشغيل يصل إلى 36 ساعة واتصال عالمي بالأجهزة"},
+{"b":"Signia","m":"Insio / Silk Charge&Go IX (داخل القناة)","s":"CIC / IIC","pw":"Insio: بسيط إلى متوسط-شديد","lo":2,"hi":4,"rc":2,"bt":2,"ph":"حسب الموديل","nz":"معالجة IX بحجم صغير","tn":"حسب الموديل","bud":2,"why":"أقل ظهوراً داخل القناة؛ Silk Charge&Go قابلة للشحن (CIC)"},
+{"b":"Widex","m":"Allure","s":"RIC / BTE / ITE","pw":"حسب الشكل والمستوى (110 إلى 440)","lo":2,"hi":5,"rc":2,"bt":1,"ph":"Bluetooth 2.4 GHz (تأكد من توافقها مع جوالك)","nz":"شريحة W1 وتحسين وضوح الكلام في الضوضاء","tn":"حسب الموديل","bud":3,"why":"المنصة الرائدة من Widex منذ 2025 بأربعة مستويات؛ أُعلن عن Allure AI مع Clarity Boost وموعد توفره غير مؤكد"},
+{"b":"Widex","m":"SmartRIC","s":"RIC","pw":"حسب الموديل","lo":2,"hi":4,"rc":1,"bt":1,"ph":"Bluetooth","nz":"تصميم L الشكل لاتجاهية أفضل ومعالجة Speech Enhancer","tn":"حسب الموديل","bud":2,"why":"RIC نحيفة بشكل L مناسبة للنشطين ومن يهتم بالمظهر"},
+{"b":"Starkey","m":"Omega AI / Omega AI+","s":"RIC / ITE","pw":"mRIC R · RIC RT (Telecoil) · RIC 312 · مخصصة","lo":2,"hi":5,"rc":2,"bt":1,"ph":"Bluetooth LE Audio وAuracast (حسب الموديل)","nz":"DNN 360 للاتجاهية، وEdge Mode (يعمل دائماً في AI+)","tn":"حسب الموديل","bud":3,"why":"الأحدث من Starkey (Omega AI+ أُعلنت في أكتوبر 2026)، بتشغيل حتى 51 ساعة وميزات صحية"},
+{"b":"Starkey","m":"Edge AI","s":"RIC / ITE","pw":"mRIC R · RIC RT (Telecoil) · RIC 312 · ITE R وغيرها","lo":2,"hi":5,"rc":2,"bt":1,"ph":"Bluetooth LE Audio وAuracast","nz":"Edge Mode عند الحاجة للضوضاء","tn":"حسب الموديل","bud":2,"why":"أربعة مستويات (12 إلى 24) وأشكال متعددة تشمل داخل الأذن"},
+{"b":"Starkey","m":"Genesis AI","s":"RIC / ITE","pw":"mRIC · RIC RT · ITE R · CIC · IIC","lo":2,"hi":5,"rc":2,"bt":1,"ph":"حسب الموديل","nz":"معالجة بالذكاء الاصطناعي","tn":"حسب الموديل","bud":2,"why":"منصة 2023 ما زالت متاحة بأشكال كثيرة وبمستويات 12 إلى 24"},
+{"b":"Hansaton","m":"Essenz sound E-RX (AI Expert Level)","s":"RIC","pw":"S / M / P / UP","lo":2,"hi":5,"rc":1,"bt":1,"ph":"اتصال عالمي (راجع Compatibility checker)","nz":"شريحة DEEPSONIC للذكاء الاصطناعي وSenseSonic IQ لفصل الكلام عن الضوضاء","tn":"حسب الموديل","bud":2,"why":"الأعلى مستوى في Hansaton، ببطارية ليثيوم قابلة للشحن ومقاومة IP68 وبدون Telecoil"},
+{"b":"Hansaton","m":"Essenz sound E-R","s":"RIC","pw":"S / M / P / UP","lo":2,"hi":5,"rc":1,"bt":1,"ph":"اتصال عالمي (راجع Compatibility checker)","nz":"StereoBeam مع Intelligent NoiseReduction وDirectional SpeechBoost","tn":"حسب الموديل","bud":2,"why":"RIC قابلة للشحن بتشغيل يصل إلى 16 ساعة، ومناسبة لطيف واسع من الدرجات"},
+{"b":"Hansaton","m":"Essenz jazz E-R / jazz E-10 NW O","s":"ITE","pw":"E-R: M / P / SP / UP · E-10 NW O: M / P / SP","lo":2,"hi":5,"rc":2,"bt":2,"ph":"E-R لاسلكية، وE-10 NW بدون لاسلكي","nz":"E-R اتجاهية؛ E-10 NW Omni","tn":"حسب الموديل","bud":2,"why":"داخل الأذن مصنوعة حسب القالب. E-R قابلة للشحن، وE-10 ببطارية 10"},
+{"b":"Hansaton","m":"FOKUS sound FS (R312 / AQ R / AQ RT)","s":"RIC","pw":"S / M / P / UP","lo":2,"hi":5,"rc":2,"bt":1,"ph":"راجع Compatibility checker","nz":"StereoBeam وDynamic SpeechBeam","tn":"حسب الموديل","bud":2,"why":"RIC بخمسة مستويات أداء؛ بعض الموديلات قابلة للشحن (حتى 24 ساعة) وبعضها بطارية 312، وRT مع Telecoil"},
+{"b":"Hansaton","m":"FOKUS beat FS (BTE)","s":"BTE","pw":"M / P / SP / UP (RT675 UP: مخرج 141 dB SPL وكسب 80 dB)","lo":2,"hi":5,"rc":2,"bt":1,"ph":"راجع Compatibility checker","nz":"StereoBeam وDynamic SpeechBeam","tn":"حسب الموديل","bud":2,"why":"خلف الأذن للفقدان من المتوسط إلى العميق؛ أقوى موديلاتها RT675 UP، ومعظمها بـ Telecoil"},
+{"b":"Hansaton","m":"STRATOS jazz ST (312 Dir W / 312 / 10)","s":"ITE","pw":"M / P / SP (وUP في 312 Dir W)","lo":2,"hi":5,"rc":0,"bt":2,"ph":"312 Dir W لاسلكية، والباقي بدون لاسلكي","nz":"Dynamic SpeechBeam مع Intelligent NoiseReduction (في الموديل اللاسلكي)","tn":"حسب الموديل","bud":1,"why":"داخل الأذن مصنوعة حسب القالب، ببطاريات تقليدية (312 أو 10)"},
+{"b":"Hansaton","m":"wave (فئة اقتصادية)","s":"RIC / BTE","pw":"RIC R312: S / M / P / UP · BTE: M (312) / SP (13) / UP (675)","lo":2,"hi":5,"rc":0,"bt":1,"ph":"اتصال بالجوال (راجع Compatibility checker)","nz":"أساسية","tn":"حسب الموديل","bud":1,"why":"الفئة الاقتصادية من Hansaton بأربعة موديلات (RIC و3 BTE) من بسيط إلى عميق، ببطاريات تقليدية"}
+];
+let AG,MD;
+try{AG=JSON.parse(localStorage.getItem("ag"))||DEF_AG;MD=JSON.parse(localStorage.getItem("md"))||DEF_M}catch(e){AG=DEF_AG;MD=DEF_M}
+const $=i=>document.getElementById(i);
+// grid
+(function(){let h='<div></div>'+F.map(f=>`<div class="h">${f}</div>`).join('');
+[["R","الأذن اليمنى"],["L","الأذن اليسرى"]].forEach(([k,n])=>{h+=`<div class="rl">${n}</div>`+F.map(f=>`<input type="number" step="5" min="-10" max="120" data-k="${k}" data-f="${f}" aria-label="${n} ${f}">`).join('')});
+$("g").innerHTML=h})();
+function vals(k){const o={};document.querySelectorAll(`input[data-k="${k}"]`).forEach(i=>{if(i.value!=="")o[i.dataset.f]=+i.value});return o}
+const MOB=window.innerWidth<600,W=MOB?420:640,H=MOB?540:420;
+function chart(){
+const mx=50,my=30,x=i=>mx+i*(W-mx-20)/7,y=d=>my+(d+10)*(H-my-30)/130;
+let s=`<svg viewBox="0 0 ${W} ${H}" direction="ltr" width="100%" role="img" aria-label="رسم تخطيط السمع"><rect x="0" y="0" width="${W}" height="${H}" fill="var(--card)"/>`;
+// speech banana
+s+=`<path d="M${x(1)} ${y(35)} Q${x(3.2)} ${y(15)} ${x(6)} ${y(40)} L${x(6)} ${y(60)} Q${x(3.2)} ${y(40)} ${x(1)} ${y(55)}Z" fill="var(--bana)"/><text x="${W-24}" y="${y(112)}" font-size="13" fill="var(--mut)" text-anchor="end">المنطقة المظللة: الكلام التقريبي</text>`;
+[[-10,25,"#2e9d6a"],[25,40],[40,55],[55,70],[70,90],[90,120]].forEach(([a,b,c],i)=>{s+=`<rect x="${mx}" y="${y(a)}" width="${W-mx-20}" height="${y(b)-y(a)}" fill="var(--pri)" opacity="${i==0?.04:.02*i}"/>`});
+for(let d=-10;d<=120;d+=10)s+=`<line x1="${mx}" x2="${W-20}" y1="${y(d)}" y2="${y(d)}" stroke="var(--line)"/><text x="${mx-8}" y="${y(d)+4}" font-size="13" fill="var(--mut)" text-anchor="end">${d}</text>`;
+F.forEach((f,i)=>{s+=`<line y1="${my}" y2="${H-30}" x1="${x(i)}" x2="${x(i)}" stroke="var(--line)"/><text x="${x(i)}" y="${my-10}" font-size="13" fill="var(--mut)" text-anchor="middle">${f}</text>`});
+const line=(v,c,sym,dash)=>{let p=[];F.forEach((f,i)=>{if(v[f]!==undefined)p.push([x(i),y(v[f])])});
+if(p.length>1)s+=`<polyline points="${p.map(q=>q.join(',')).join(' ')}" fill="none" stroke="${c}" stroke-width="2" ${dash?'stroke-dasharray="5 4"':''}/>`;
+p.forEach(([a,b])=>{s+= sym=="O"?`<circle cx="${a}" cy="${b}" r="7" fill="var(--card)" stroke="${c}" stroke-width="2.5"/>`:sym=="X"?`<path d="M${a-6} ${b-6}L${a+6} ${b+6}M${a+6} ${b-6}L${a-6} ${b+6}" stroke="${c}" stroke-width="2.5"/>`:`<text x="${a}" y="${b+5}" font-size="14" fill="${c}" text-anchor="middle">${sym}</text>`})};
+line(vals("R"),"var(--R)","O");line(vals("L"),"var(--L)","X");line(vals("RB"),"var(--R)","&lt;",1);line(vals("LB"),"var(--L)","&gt;",1);
+s+=`<text x="${W-24}" y="${H-8}" font-size="13" fill="var(--mut)" text-anchor="end">التردد (Hz) — الشدة (dB HL)</text></svg>`;return s}
+function draw(){$("liveChart").innerHTML=chart()}
+document.querySelectorAll("#g input").forEach(i=>i.addEventListener("input",draw));draw();
+const NM={R:"الأذن اليمنى",L:"الأذن اليسرى"};
+$("liveChart").addEventListener("click",e=>{const sv=e.target.closest("svg");if(!sv)return;
+const pt=sv.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;const q=pt.matrixTransform(sv.getScreenCTM().inverse());
+const mx=50,my=30,st=(W-mx-20)/7;if(q.y<my-12||q.x<mx-20)return;
+const i=Math.max(0,Math.min(7,Math.round((q.x-mx)/st)));
+const d=Math.max(-10,Math.min(120,Math.round(((q.y-my)*130/(H-my-30)-10)/5)*5));
+const k=document.querySelector('input[name="mode"]:checked').value;
+const inp=document.querySelector(`input[data-k="${k}"][data-f="${F[i]}"]`);
+if(inp.value!==""&&+inp.value===d){inp.value="";$("hint").textContent=`حُذفت نقطة ${NM[k]} عند ${F[i]} Hz`}
+else{inp.value=d;$("hint").textContent=`${NM[k]}: ${F[i]} Hz عند ${d} dB`}
+draw()});
+$("clr").onclick=()=>{document.querySelectorAll("#g input").forEach(i=>i.value="");$("hint").textContent="تم مسح كل النقاط.";draw()};
+$("bMan").onclick=()=>{$("entry").scrollIntoView()};
+const avg=a=>a.reduce((x,y)=>x+y,0)/a.length;
+function pta(v){const a=[500,1000,2000,4000].filter(f=>v[f]!==undefined).map(f=>v[f]);return a.length>=3?Math.round(avg(a)):null}
+function deg(p){return p<=25?[0,"سمع طبيعي"]:p<=40?[1,"ضعف بسيط"]:p<=55?[2,"ضعف متوسط"]:p<=70?[3,"ضعف متوسط إلى شديد"]:p<=90?[4,"ضعف شديد"]:[5,"ضعف عميق"]}
+function cfg(v){const l=v[500]!==undefined?v[500]:v[250],h=v[4000]!==undefined?v[4000]:v[3000];if(l===undefined||h===undefined)return null;
+const d=h-l;if(Math.abs(d)<20)return"Flat (مستوٍ)";return d>0?(d>=40?"Sloping حاد (يهبط نحو الترددات العالية)":"Sloping (يهبط نحو الترددات العالية)"):"Rising (أسوأ في الترددات المنخفضة)"}
+function typ(a,b){const k=F.filter(f=>a[f]!==undefined&&b[f]!==undefined);if(k.length<3)return null;const gap=avg(k.map(f=>a[f]-b[f]));
+const p=avg(k.map(f=>b[f]));if(a&&gap<10)return p>25?"أقرب إلى SNHL (حسب العظمي المُدخل)":"طبيعي عظمياً";return p<=25?"أقرب إلى Conductive":"أقرب إلى Mixed"}
+const expl=[
+"لا تتوقع صعوبة ملحوظة في الحياة اليومية بناءً على هذه الأرقام فقط.",
+"قد تجد صعوبة في سماع الكلام الهادئ أو البعيد، وخاصة في الأماكن المزدحمة.",
+"قد تحتاج رفع الصوت أحياناً، ويصعب فهم الكلام وسط الضوضاء أو في الاجتماعات.",
+"غالباً يصعب فهم المحادثة العادية دون مساعدة، وتفوتك أجزاء كثيرة من الكلام.",
+"غالباً لا تسمع أغلب الكلام العادي وتحتاج مساعدة سمعية قوية وتواصلاً بصرياً.",
+"قد لا تسمع إلا الأصوات العالية جداً، ويلزم تقييم متخصص للخيارات."];
+let S=null;
+$("bAn").onclick=()=>{
+const R=vals("R"),L=vals("L"),RB=vals("RB"),LB=vals("LB");const pr=pta(R),pl=pta(L);
+const warns=[];
+if(pr===null&&pl===null){alert("تخطيط السمع مطلوب: أدخل 3 ترددات على الأقل من (500 و1000 و2000 و4000) لأذن واحدة.");$("liveChart").scrollIntoView();return}
+if(pr===null||pl===null)warns.push("البيانات غير مكتملة لإحدى الأذنين، والتحليل أدناه جزئي.");
+if(pr!==null&&pl!==null){const d=Math.abs(pr-pl),big=F.some(f=>R[f]!==undefined&&L[f]!==undefined&&Math.abs(R[f]-L[f])>=20);
+if(d>=15||big)warns.push("يوجد عدم تماثل واضح بين الأذنين. يُنصح بمراجعة طبيب أو أخصائي سمعيات لتقييم إضافي قبل أي ترشيح للسماعات.")}
+if(["B","C"].includes($("tympR").value)||["B","C"].includes($("tympL").value))warns.push("نتيجة Tympanometry المُدخلة قد تشير إلى مشكلة في الأذن الوسطى وتستدعي تقييماً طبياً.");
+const wr=[+$("wrsR").value,+$("wrsL").value];if(($("wrsR").value&&wr[0]<70)||($("wrsL").value&&wr[1]<70))warns.push("نتيجة فهم الكلام (WRS) منخفضة في إحدى الأذنين، وقد تؤثر على الاستفادة من السماعات. ناقشها مع الأخصائي.");
+const hasBC=Object.keys(RB).length+Object.keys(LB).length>0;
+const side=(n,c,v,b,p,t)=>{if(p===null)return `<div class="ear ${c}"><h3>${n}</h3><p class="note">بيانات غير كافية.</p></div>`;const [di,dn]=deg(p);
+const ty=hasBC?typ(v,b):null,cf=cfg(v);
+return `<div class="ear ${c}"><h3>${n}</h3><span class="tag">PTA ${p} dB</span><span class="tag">${dn}</span>${cf?`<span class="tag">${cf}</span>`:""}${ty?`<span class="tag">${ty}</span>`:""}<p>${expl[di]}</p></div>`};
+$("result").innerHTML=`<section><h2>نتيجة التحليل</h2>${chart()}<div class="two" style="margin-top:14px">${side("الأذن اليمنى","r",R,RB,pr)}${side("الأذن اليسرى","l",L,LB,pl)}</div>${warns.map(w=>`<div class="warn">⚠️ ${w}</div>`).join("")}<p class="note">PTA محسوب من 500 و1000 و2000 و4000 Hz. هذا شرح تثقيفي وليس تشخيصاً.</p></section>`;
+$("result").classList.remove("hidden");$("curSec").classList.remove("hidden");$("curOut").innerHTML="";
+S={pr,pl,worst:Math.max(pr===null?0:deg(pr)[0],pl===null?0:deg(pl)[0]),asym:warns.some(w=>w.includes("عدم تماثل"))};
+if(S.worst>=1){$("prefs").classList.remove("hidden")}else $("prefs").classList.add("hidden");
+$("result").scrollIntoView({behavior:"smooth"})};
+let sel=new Set(),recList=[];
+$("bRec").onclick=()=>{
+const w=S?S.worst:2,a=$("age").value,life=$("life").value,ph=$("phone").value,st=$("style").value,bu=$("bud").value;
+const lvl=w; // 1..5
+let r=MD.map((m,i)=>{let sc=0;if(lvl<m.lo-1||lvl>m.hi)sc-=100;
+if(lvl>=m.lo-1&&lvl<=m.hi)sc+=5; // allow edge
+if($("bt").checked)sc+=m.bt===2?0:m.bt?3:-4;if($("rc").checked)sc+=m.rc===2?0:m.rc?3:-3;
+if($("nz").checked||life=="n")sc+=/ضوضاء|AI|ذكاء/.test(m.nz)?3:0;
+if($("tn").checked)sc+=/موجودة|Zen|قد/.test(m.tn)?3:-2;
+if(st&&m.s.includes(st.split("/")[0]))sc+=4;if(bu&&m.bud==+bu)sc+=3;
+if(ph=="i"||ph=="a")sc+=m.ph.includes("وAndroid")?2:0;
+if(a=="s"&&/BTE|ITE/.test(m.s)==false&&lvl>=3)sc+=0;
+return {i,sc}}).filter(x=>x.sc>-50).sort((a,b)=>b.sc-a.sc);const seen={},cnt={},pick=[];r.forEach(x=>{const b=MD[x.i].b;if(!seen[b]){seen[b]=1;cnt[b]=1;pick.push(x)}});r.forEach(x=>{const b=MD[x.i].b;if(pick.length<8&&!pick.includes(x)&&cnt[b]<2){cnt[b]++;pick.push(x)}});r=pick.sort((a,b)=>b.sc-a.sc);
+recList=r.map(x=>x.i);sel=new Set();
+let h=r.map(({i})=>{const m=MD[i],ag=AG[m.b]||{};
+return `<div class="hc"><div class="brand">${m.b}</div><b>${m.m}</b><span class="tag" style="align-self:flex-start">${m.s}</span>
+<div class="note">Power / Receiver: ${m.pw}</div><p style="margin:0;font-size:14px"><b>لماذا قد تناسبك؟</b> ${m.why}.</p>
+<ul><li>${m.bt===2?"Bluetooth: حسب الموديل":m.bt?"Bluetooth":"بدون Bluetooth"}</li><li>${m.rc===2?"الشحن: حسب الموديل":m.rc?"Rechargeable (حسب النسخة)":"بطاريات تقليدية"}</li><li>الضوضاء: ${m.nz}</li><li>الطنين: ${m.tn}</li></ul>
+<label><input type="checkbox" data-c="${i}"> أضف للمقارنة</label>
+<button class="sm sec" data-a="${i}">عرض الوكيل المعتمد في السعودية</button>
+<div class="agent" id="ag${i}">${agentHtml(m.b,ag)}</div></div>`}).join("");
+$("recs").innerHTML=h||'<p>لا توجد خيارات مطابقة. عدّل التفضيلات أو راجع الأخصائي.</p>';
+$("bCmp").classList.toggle("hidden",!r.length);
+if(S&&S.asym)$("recs").insertAdjacentHTML("beforebegin",'<div class="warn">⚠️ نتيجتك فيها عدم تماثل بين الأذنين. يُنصح بتقييم إضافي قبل الاعتماد على هذه الخيارات.</div>');
+$("recs").querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{const e=$("ag"+b.dataset.a);e.style.display=e.style.display=="block"?"none":"block"});
+$("recs").querySelectorAll("[data-c]").forEach(c=>c.onchange=()=>{c.checked?sel.add(+c.dataset.c):sel.delete(+c.dataset.c);if(sel.size>4){sel.delete(+c.dataset.c);c.checked=false;alert("يمكن مقارنة 4 سماعات كحد أقصى.")}})};
+function agentHtml(b,a){if(!a.name)return `لم يُضف وكيل معتمد لـ ${b} بعد، لأن البيانات تتطلب التحقق من المصدر الرسمي للشركة.`;
+return `<b>${a.name}</b>${a.phone?`<br>الهاتف: <span dir="ltr">${a.phone}</span>`:"<br>رقم التواصل: غير متوفر بعد"}${a.site?`<br><a href="${a.site}" target="_blank" rel="noopener">الموقع الإلكتروني</a>`:""}${a.branches?`<br>الفروع: ${a.branches}`:""}${a.verified?"":'<br><span class="note">بانتظار التحقق من المصدر الرسمي</span>'}`}
+$("bCmp").onclick=()=>{if(sel.size<2){alert("اختر سماعتين على الأقل.");return}
+const L=[...sel].map(i=>MD[i]);const rows=[["الشركة",m=>m.b],["الموديل",m=>m.m],["الشكل",m=>m.s],["مدى القدرة (Power)",m=>m.pw],["البطارية",m=>m.rc===2?"حسب الموديل":m.rc?"قابلة للشحن (حسب النسخة)":"تقليدية"],["الشحن",m=>m.rc===2?"حسب الموديل":m.rc?"Rechargeable":"لا"],["Bluetooth",m=>m.bt===2?"حسب الموديل":m.bt?"نعم":"لا"],["iPhone / Android",m=>m.ph],["خصائص الضوضاء",m=>m.nz],["خصائص الطنين",m=>m.tn],["الوكيل في السعودية",m=>(AG[m.b]&&AG[m.b].name)||"غير متوفر بعد"]];
+$("cmp").innerHTML="<table><tr><th></th>"+L.map(m=>`<th>${m.b}</th>`).join("")+"</tr>"+rows.map(([n,f])=>`<tr><th>${n}</th>${L.map(m=>`<td>${f(m)}</td>`).join("")}</tr>`).join("")+"</table>";$("cmp").scrollIntoView({behavior:"smooth"})};
+function renderAgents(){fillDl()}
+function adLoad(){$("adA").value=JSON.stringify(AG,null,1);$("adM").value=JSON.stringify(MD,null,1)}
+$("adS").onclick=()=>{try{const a=JSON.parse($("adA").value),m=JSON.parse($("adM").value);AG=a;MD=m;try{localStorage.setItem("ag",JSON.stringify(a));localStorage.setItem("md",JSON.stringify(m))}catch(e){}renderAgents();$("adMsg").textContent="تم الحفظ"}catch(e){$("adMsg").textContent="صيغة JSON غير صحيحة"}};
+$("adR").onclick=()=>{AG=DEF_AG;MD=DEF_M;try{localStorage.removeItem("ag");localStorage.removeItem("md")}catch(e){}adLoad();renderAgents();$("adMsg").textContent="تمت الاستعادة"};
+
+function fillDl(){$("mdl").innerHTML=MD.map(m=>`<option value="${m.b} ${m.m}">`).join("")}
+const PWR={S:[1,3],M:[1,4],P:[3,5],UP:[4,5]};
+$("bCur").onclick=()=>{
+if(!S){return}
+const nz=x=>x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""),nm=nz($("curName").value.trim()),pw=$("curPw").value;
+const md=nm?MD.find(m=>nz(m.b+" "+m.m).includes(nm)||(nm.includes(nz(m.b))&&nm.includes(nz(m.m).split(/[\s(]/)[0]))):null;
+let rg=pw?PWR[pw]:(md?[md.lo-1,md.hi]:null);
+if(!rg){$("curOut").innerHTML='<div class="warn">لم نتعرف على سماعتك. اختر قوة الـ Receiver إن كنت تعرفها، أو راجع أخصائي السمعيات للتأكد.</div>';return}
+const ear=(n,p)=>{if(p===null)return `<li>${n}: لا توجد بيانات في التخطيط.</li>`;const l=deg(p)[0];
+const t=l===0?"سمعك ضمن الطبيعي لهذه الأذن، وغالباً لا تحتاج سماعة.":l<rg[0]?"قوة السماعة قد تكون أعلى من حاجتك لهذه الأذن.":l>rg[1]?"قوة السماعة قد لا تكون كافية لدرجة ضعف السمع في هذه الأذن.":"قوة السماعة قد تكون مناسبة لدرجة ضعف السمع في هذه الأذن.";
+return `<li><b>${n}</b> (${deg(p)[1]}): ${t}</li>`};
+$("curOut").innerHTML=`<div class="two" style="display:block"><b>${md?md.b+" "+md.m:($("curName").value||"سماعتك")}</b><ul>${ear("الأذن اليمنى",S.pr)}${ear("الأذن اليسرى",S.pl)}</ul></div><div class="warn">هذا تقدير مبدئي من درجة ضعف السمع وقوة السماعة فقط. المناسبة الفعلية تعتمد على شكل التخطيط، والـ Receiver، والـ Coupling، والبرمجة، ويحددها أخصائي السمعيات.</div>`};
+
+
+if(location.hash.indexOf("admin")>-1)$("agentsSec").classList.remove("hidden");
+renderAgents();adLoad();
+</script>
+</body>
+</html>
